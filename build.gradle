@@ -4,7 +4,7 @@ apply plugin: "maven-publish"
 
 tasks.named('wrapper') {
 	gradleVersion = '7.4.2'
-	distributionUrl = "http://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+	distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }
 
 sourceSets {
@@ -73,6 +73,9 @@ dependencies {
 	implementation "org.slf4j:slf4j-jdk14:1.7.7"
 
 	testImplementation 'junit:junit:4.13.2'
+	testImplementation 'org.mockito:mockito-core:4.5.1'
+	testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.2'
+	testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.2'
 }
 
 tasks.withType(Test) {
