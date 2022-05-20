@@ -80,6 +80,11 @@ dependencies {
 	testImplementation 'org.mockito:mockito-core:4.5.1'
 	testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.2'
 	testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.2'
+
+	// https://mvnrepository.com/artifact/org.apache.geode/geode-junit
+	testImplementation 'org.apache.geode:geode-junit:1.14.4'
+
+
 }
 
 tasks.withType(Test) {

@@ -4,6 +4,7 @@ import com.complexible.common.openrdf.vocabulary.FOAF;
 import com.complexible.pinto.impl.IdentifiableImpl;
 import com.google.common.collect.Maps;
 import org.junit.Rule;
+import org.apache.geode.test.junit;
 import org.junit.Test;
 import org.openrdf.model.Model;
 import org.openrdf.model.Resource;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.net.URI;
 import java.sql.Time;
 import java.util.*;
+
 import static org.junit.Assert.*;
 public class RDFMapperTestsIET {
     @Rule
@@ -30,7 +32,7 @@ public class RDFMapperTestsIET {
         p.setName("John Doe");
         Model x = RDFMapper.create().writeValue(p);
         final RDFMapperTests.Person resultP = RDFMapper.create().readValue(x, null, null);
-        assertNull(resultP); // check if new instance created, can be changed with using setter. It souldnt be possible
+        assertNull(resultP); // check if new instance created, can be changed with using setter. It shouldn't be possible
     }
     @Test
     public void testWritePrimitivesExtended() throws Exception {
@@ -49,7 +51,7 @@ public class RDFMapperTestsIET {
         Model aExpected = ModelIO.read(new File(getClass().getResource("/data/extended_primitives.nt").toURI()).toPath());
         assertEquals(aExpected, aGraph);
         assertTrue(Models.isomorphic(aGraph, aExpected));
-        // checking if instace is correctly changed after setter calls.
+        // checking if instance is correctly changed after setter calls.
     }
     @Test
     public void testReadPrimitivesExtended() throws Exception {
