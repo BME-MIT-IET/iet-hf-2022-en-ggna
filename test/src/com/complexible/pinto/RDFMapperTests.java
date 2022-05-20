@@ -542,9 +542,10 @@ public class RDFMapperTests {
 				                              .readValue(aGraph, UUID.class);
 		assertEquals(UUID.fromString("0110f311-964b-440d-b772-92c621c5d1e4"), aResult);
 	}
+	
 	@Test
 	public void testWriteMap() throws Exception {
-		Assume.assumeTrue(UTCChecker.isSystemUTCPlusOne());
+		//Assume.assumeTrue(UTCChecker.isSystemUTCPlusOne());
 		
 		final ClassWithMap aObj = new ClassWithMap();
 		aObj.mMap = Maps.newLinkedHashMap();
@@ -559,9 +560,10 @@ public class RDFMapperTests {
 		final Model inFile=ModelIO.read(Files3.classPath("/data/map.nt").toPath());
 		assertTrue(Models.isomorphic(aGraph,inFile));
 	}
+	
 	@Test
 	public void testReadMap() throws Exception {
-		Assume.assumeTrue(UTCChecker.isSystemUTCPlusOne());
+		//Assume.assumeTrue(UTCChecker.isSystemUTCPlusOne());
 		final ClassWithMap aExpected = new ClassWithMap();
 		aExpected.mMap = Maps.newLinkedHashMap();
 		aExpected.mMap.put("bob", new Person("Bob the tester"));
@@ -576,6 +578,7 @@ public class RDFMapperTests {
 		                                 .readValue(aGraph, ClassWithMap.class,
 		                                                    SimpleValueFactory.getInstance().createIRI("tag:complexible:pinto:06f95e70fea33fcd99e6804b02f96cc9")));
 	}
+	
 	public static final class Files3 {
 		public static File classPath(final String thePath) {
 			try {
