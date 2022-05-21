@@ -100,7 +100,7 @@ We used the following tools:
 ## Steps
 First, we need to install EclEmma on Eclipse. As soon as you manage to install the plugin, an additional option on the project execution context menu will be available for code coverage.
 
-![CoverageAs](CoverageAs.PNG)
+![CoverageAs](docs/CoverageAs.PNG)
 
 Basically, the tool runs the jUnit test and documents all source code (both junit and project source) and display the coverage level of each implementation method / class. This is extremely helpful in measuring the code quality and stability of our code.
 
