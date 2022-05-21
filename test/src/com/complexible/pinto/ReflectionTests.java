@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class ReflectionTests {
     @Test
     public void checkInterfacesTest() {
-        // check if this ClassThatImplements(ClassThatImplements.class --> use the class itselve) interface with name TestInterfaceOne. my assumption is that .class is used since the interface will also inherit fuc form class
+        // check if this ClassThatImplements(ClassThatImplements.class --> use the class itselve) interface with name TestInterfaceOne .class is used since the interface will also inherit form class
         assertTrue(Classes._implements(ClassThatImplements.class, TestInterfaceOne.class));
         assertFalse(Classes._implements(ClassThatImplements.class, TestInterfaceThree.class));
     }
