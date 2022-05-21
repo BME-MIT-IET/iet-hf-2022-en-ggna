@@ -1,6 +1,6 @@
 # Test Cases Documentation
 
-### POJECT
+### PROJECT
 
 - Product Name: Pinto
 

@@ -2,8 +2,6 @@ plugins {
   id "org.sonarqube" version "3.3"
 }
 
-
-
 repositories {
 	mavenCentral()
 }
@@ -25,13 +23,11 @@ tasks.named('wrapper') {
 	distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }
 
-
 compileTestJava {
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 	options.compilerArgs += '-parameters'
 }
-
 
 sourceSets {
 	main {
@@ -104,17 +100,8 @@ dependencies {
 	testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.2'
 	testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.2'
 
-
-	
-
-	
-
 	// To avoid compiler warnings about @API annotations in JUnit code
-	testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
-
-
-
-	
+	testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')	
 }
 
 tasks.withType(Test) {
