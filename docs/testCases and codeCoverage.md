@@ -18,8 +18,24 @@ The rdf4j framework is used to represent RDF primitives such as Graph and Statem
 - Giorgi Bestavashvili
 
 
+## BUILD
 
-## JUNIT TEST
+To create the artifacts:
+
+```bash
+$ gradle jar
+```
+
+And to run the tests:
+
+```bash
+$ gradle test
+```
+The application and all the tests successfully run.
+
+![BuildSuccess](BuildSuccess.PNG)
+
+## JUNIT TESTS
 
 We first started with refactoring the code to reduce the code smells and define a function for all the redundant code and code duplication. Then implemented the test cases.
 
@@ -70,3 +86,27 @@ We first started with refactoring the code to reduce the code smells�
 | --- | --------- |--------- | 
 | 1   | checkInterfacesTest()() | Check if this ClassThatImplements(ClassThatImplements.class --> use the class itselve) interface with name TestInterfaceOne. class is used since the interface will also inherit form class.          |
 | 2   | getInterfacesTest() | count how many interfaces 1 class will implement (example: class A : Interface1, Interface2{...}).         |
+
+
+# CODE COVERAGE
+## Introduction
+For all test cases, it is important that coverage always analyses the whole code. This is a definitive and statistical proof that all testable code is indeed tested.
+## Tools
+We used the following tools:
+
+- Eclipse
+
+- EclEmma plugin for eclipse – code coverage tool
+## Steps
+First, we need to install EclEmma on Eclipse. As soon as you manage to install the plugin, an additional option on the project execution context menu will be available for code coverage.
+
+![CoverageAs](CoverageAs.PNG)
+
+Basically, the tool runs the jUnit test and documents all source code (both junit and project source) and display the coverage level of each implementation method / class. This is extremely helpful in measuring the code quality and stability of our code.
+
+![Coverage1](Coverage1.PNG)
+
+The results of the code coverage was not satisfying. We went through the test cases and checked line by line to find the mistakes that we have made to work on the tests in order to increase the percentage of our code coverage.
+After solving errors, we were able to increase the code coverage from 1.7% to 18.1%.
+
+![Coverage2](Coverage2.PNG)
