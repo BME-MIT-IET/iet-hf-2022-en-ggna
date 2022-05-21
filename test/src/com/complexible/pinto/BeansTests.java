@@ -10,8 +10,7 @@ import static org.junit.Assert.*;
 
 public class BeansTests 
 {
-    // attribute that singlas to compiler that this is nUnit test method
-  
+   
     @Test
     public void TestGetDeclaredFields() {
         // crating generic iterable(can be interabe with for or foreach loop) list of type Field
