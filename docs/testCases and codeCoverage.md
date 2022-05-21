@@ -34,6 +34,7 @@ $ gradle test
 The application and all the tests successfully run.
 
 ![BuildSuccess](BuildSuccess.PNG)
+![](BuildSuccess.png)
 
 ## JUNIT TESTS
 
