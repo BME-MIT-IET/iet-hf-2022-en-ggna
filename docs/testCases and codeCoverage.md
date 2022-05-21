@@ -33,7 +33,6 @@ $ gradle test
 ```
 The application and all the tests successfully run.
 
-![BuildSuccess](BuildSuccess.PNG)
 ![](BuildSuccess.png)
 
 ## JUNIT TESTS
@@ -101,15 +100,14 @@ We used the following tools:
 ## Steps
 First, we need to install EclEmma on Eclipse. As soon as you manage to install the plugin, an additional option on the project execution context menu will be available for code coverage.
 
-![CoverageAs](docs/CoverageAs.PNG)
+![](CoverageAs.png)
 
 Basically, the tool runs the jUnit test and documents all source code (both junit and project source) and display the coverage level of each implementation method / class. This is extremely helpful in measuring the code quality and stability of our code.
 
-![Coverage1](Coverage1.PNG)
-![Coverage1](https://github.com/BME-MIT-IET/iet-hf-2022-en-ggna/blob/master/docs/BuildSuccess.PNG)
+![](Coverage1.png)
 
 
 The results of the code coverage was not satisfying. We went through the test cases and checked line by line to find the mistakes that we have made to work on the tests in order to increase the percentage of our code coverage.
 After solving errors, we were able to increase the code coverage from 1.7% to 18.1%.
 
-![Coverage2](Coverage2.PNG)
+![](Coverage2.png)
