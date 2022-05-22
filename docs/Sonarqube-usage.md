@@ -45,8 +45,8 @@ and by pressing the link can see the analysis.
 
 overall code overview:
 
-![Overview](images/overall%20overview.PNG)
+![Overview](../images/overall%20overview.PNG)
 
 Some code smells:
 
-![Overview](images/code-smells.PNG)
+![Overview](../images/code-smells.PNG)
